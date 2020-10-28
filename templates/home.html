@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+
 <!--<img src="{{url_for('static', filename='/js/img.png')}}" align="middle" />-->
 <div style="height: 100vh;background-color: blanchedalmond;color:black;" class="jumbotron ui-widget">
     <h1 style="text-align: center;padding: 20px;"> Auto-Complete Search-as-you-type here</h1>
@@ -24,16 +25,19 @@
             data:{'data': e.target.value},
             success: function(html)
             {
-                console.log(html)
+ //               console.log(html)
                 var data = html.aggregations.auto_complete.buckets
-                var _ = []
-
+                var mylist = []
+               // console.log(data)
                 $.each(data, (index, value)=>{
-                    _.push(value.key)
+                    mylist.push(value.key)
                 });
-                console.log(_)
+                console.log(mylist)
+                if(mylist.length == 1 ){
+                $result.innerHTML = mylist;
+                }
                 $( "#source" ).autocomplete({
-                    source: _
+                    source: mylist
                 });
             }
         });
