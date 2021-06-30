@@ -26,7 +26,7 @@ run app1.py
 
 
 **Output**
-
+![Alt text](https://github.com/phani-1995/Elasticsearch_Autocompletion/blob/master/output/Screenshot%20from%202020-10-31%2016-09-53.png)
 ![Alt text](https://github.com/phani-1995/Elasticsearch_Autocompletion/blob/master/output/Screenshot%20from%202020-10-31%2016-09-53.png)
 
 
